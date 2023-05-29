@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Check the font*/
+    line-height: 1.65;
+    background-color: #F0EABE;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    display: none; /* hide the button by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+  }
+  
+  /* Show the button when the user scrolls down */
+  @media (min-height: 400px) {
+    .scroll-to-top {
+      display: block;
+    }
+  }
+  
+  /* Button hover styles */
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+
+  #sidebar img {
+    width:180px;
+    height: 90px;
+    margin: auto;
+    float: left;
+    
+  }
+
+#sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+  }
+  
+  #sidebar ul {
+	list-style: none;
+	margin-right: 25px;
+	padding: 0;
+	display: flex;
+    white-space: nowrap;
+    font-size: 20px;
+    
+}
+
+#sidebar li {
+	margin: 0 15px;
+}
+
+#sidebar a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+    text-align: center;
+}
+
+#sidebar a:hover {
+	background-color: #555;
+}
+
+ #form {
+	display:flex;
+  flex-direction: row;
+	align-items: left;
+  margin-right: 15px;
+    
+    
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+#Search {
+    caret-color: #009FBD;
+    position: relative;
+    width: 205px;
+    border: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    margin-right: 105px;
+    flex-direction: row;
+}
+
+ #search-button {
+	background-color: #05BFDB;
+	color: black;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+    width: 75px;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    margin-right: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56vh;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .title {
+    font-size: 58px;
+    text-align: center;
+    color: rgb(255, 252, 48);
+    margin-left: 10px;
+  }
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 56vh;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+
+.paragraph {
+  font-size: 16px;
+  text-align: center;
+  color: rgb(255, 252, 48);
+  margin-left: 32px;
+  margin-right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .subheading {
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-size: 44px;
+    font-weight: bold;
+    margin-right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 50px;
+    height: 746px; /* Increase the height */
+    width: 200px; /* Increase the width */
+  }
+  
+  .subheading::before,
+  .subheading::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 50px;
+    background-color: #333;
+    margin: 0 10px;
+  }

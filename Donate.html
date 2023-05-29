@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><!--Ensures that the browser interpret and display the text on the web page-->
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"><!--To make web pages responsive and adaptable to different screen sizes-->
+        <meta name="keywords" content="Sea Turtles , Turtle Hatchery , Nature"><!--Keywords-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="author" content="Rashad Riyadh"> <!--Author of the Web Page-->
+        <title> Home Page </title>
+        <link rel="icon" type="image/x-icon" href="images/Logo.png"> <!--Favicon img next to the title-->
+        <link rel="stylesheet" href="Donate.css"> <!--To  Link the CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <header>
+        <nav id="sidebar">
+          <div class="logo">
+            <img src="images/Logo.png">
+          </div>
+          <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Turtle_Categories.html">Turtle Categories</a></li>
+                <li class="dropdown">
+                  <a href="#">Hatcheries</a>
+                  <div class="dropdown-content">
+                      <a href="Hikkaduwa.html">Hikkaduwa</a>
+                      <a href="Bentota.html">Bentota</a>
+                      <a href="Kosgoda.html">Kosgoda</a>
+                  </div>
+              </li>
+                <li><a href="Threats.html">Threats and Solutions</a></li>
+                <li><a href="#">Purchase</a></li>
+          </ul>
+          <form>
+            <input type="text" id="Search" placeholder="Search">
+            <button type="submit" id="search-button">Search</button>
+          </form>
+        </nav>
+    </header>
+    <body>
+      <h1 class="decorative-heading">SUPPORT US</h1>
+      <p>Donating towards turtle hatcheries in Sri Lanka can have a significant positive impact on both society and the survival of these majestic creatures. Turtle hatcheries play a crucial role in conserving endangered turtle species and their habitats.
+      By supporting these hatcheries, you contribute to the preservation of marine biodiversity and the delicate ecosystems that turtles rely on. Your donation helps fund the necessary resources and conservation efforts to protect turtle nesting sites, monitor hatching processes, and ensure the safe release of baby turtles into the ocean.<br>
+        
+      Furthermore, your contribution directly benefits the local communities surrounding the hatcheries. These communities often rely on tourism and sustainable livelihoods linked to turtle conservation. Your support helps create employment opportunities, educational initiatives, and sustainable eco-tourism practices, thereby improving the socio-economic well-being of the region.
+      The impact of your donation goes beyond the immediate benefits to turtles and local communities. It also promotes awareness and environmental stewardship on a broader scale. By supporting turtle hatcheries, you inspire others to take action and contribute to the conservation of our natural heritage.<br>
+        
+      Together, we can make a significant difference. Your donation towards turtle hatcheries in Sri Lanka not only safeguards the future of these incredible creatures but also fosters a harmonious relationship between society and the environment. Let us unite in our commitment to protect turtles, preserve ecosystems, and create a sustainable future for generations to come.</p>
+      <h2 class="decorative-heading2">Here is how you can donate today ; </h2>
+      <div class="donate-container">
+        <h2>Donation Amount</h2>
+        <div class="amounts">
+          <button class="amount">$10</button>
+          <button class="amount">$25</button>
+          <button class="amount">$50</button>
+        </div>
+        <div class="custom-amount">
+          <label for="custom">Enter custom amount: </label>
+          <input type="number" id="custom" placeholder="Custom Amount">
+        </div>
+        <button class="next-button">Next</button>
+        <div class="section-2" style="display: none;">
+          <h2>Personal Information</h2>
+          <input type="text" id="first-name" placeholder="First Name">
+          <br>
+          <input type="text" id="last-name" placeholder="Last Name">
+          <br>
+          <input type="email" id="email" placeholder="Email">
+          <br>
+          <button class="confirm-button">Confirm</button>
+        </div>
+        <div class="message" style="display: none;">
+          <p>Thank you for donating!</p>
+    
+        </div>
+    
+      </div>
+    
+      <script>
+        const amounts = document.querySelectorAll('.amount');
+        const nextButton = document.querySelector('.next-button');
+        const confirmButton = document.querySelector('.confirm-button');
+        const section2 = document.querySelector('.section-2');
+        const message = document.querySelector('.message');
+    
+        amounts.forEach(amount => {
+          amount.addEventListener('click', () => {
+            section2.style.display = 'block';
+          });
+        });
+    
+        nextButton.addEventListener('click', () => {
+          section2.style.display = 'block';
+        });
+    
+        confirmButton.addEventListener('click', () => {
+          section2.style.display = 'none';
+          message.style.display = 'block';
+        });
+      </script>
+      <div class="Image">
+        <h5> Bank Details </h5>
+        <img src="images/Turtle.jpg">
+        <h6> Bank account: 01194746736<br>
+             Sea Turtle Foundation<br>
+             IBAN: NL70 TRIO 0390 9057 71<br>
+             BIC/SWIFT: TRIONL2U
+        </h6>
+      </div>
+    </body>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h5 class="mb-1"></h5><i class="fa fa-road"></i> The Turtle Hatchery</h5>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="list-unstyled">
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Benefits</a></li>
+                        <li><a href="">Partners</a></li>
+                        <li><a href="">Team</a></li>
+                  </ul>
+                </div>
+              <div class="col-6">
+                  <ul class="list-unstyled">
+                        <li><a href="">Documentation</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Legal Terms</a></li>
+                        <li><a href="">About</a></li>
+                  </ul>
+              </div>
+            </div>
+                  <ul class="social media">
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                      </a>
+                      <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                      </div>
+                  </ul>
+                  <br>
+                </div>
+                <div class="col-md-2">
+                  <h5 class="text-md-right">Contact Us</h5>
+                  <hr>
+                </div>
+                <div class="col-md-5">
+                  <form>
+                    <fieldset class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <textarea class="form-control" id="exampleMessage" placeholder="Message" rows="6" style="width: 98%;"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-right">
+                      <button type="button" class="button5">Send</button>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </footer>
+</html>

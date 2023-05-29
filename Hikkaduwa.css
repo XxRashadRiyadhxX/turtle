@@ -1,0 +1,401 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Check the font*/
+    line-height: 1.65;
+    background-color: #F0EABE;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    display: none; /* hide the button by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+  }
+  
+  /* Show the button when the user scrolls down */
+  @media (min-height: 400px) {
+    .scroll-to-top {
+      display: block;
+    }
+  }
+  
+  /* Button hover styles */
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+
+  #sidebar img {
+    width:180px;
+    height: 90px;
+    margin: auto;
+    float: left;
+    
+  }
+
+#sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+  }
+  
+  #sidebar ul {
+	list-style: none;
+	margin-right: 25px;
+	padding: 0;
+	display: flex;
+    white-space: nowrap;
+    font-size: 20px;
+    
+}
+
+#sidebar li {
+	margin: 0 15px;
+}
+
+#sidebar a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+    text-align: center;
+}
+
+#sidebar a:hover {
+	background-color: #555;
+}
+
+ #form {
+	display:flex;
+  flex-direction: row;
+	align-items: left;
+  margin-right: 15px;
+    
+    
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+#Search {
+    caret-color: #009FBD;
+    position: relative;
+    width: 205px;
+    border: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    margin-right: 105px;
+    flex-direction: row;
+}
+
+ #search-button {
+	background-color: #05BFDB;
+	color: black;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+    width: 75px;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    margin-right: 10px;
+}
+
+#hikkaduwa-section {
+    background-image: url('images/Hikkaduwa_1920x700.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px; /* Set the desired height for the section */
+    text-align: center;
+    margin-bottom: 10px;
+    
+  }
+  
+  #hikkaduwa-section h1 {
+    color: white;
+    font-family: 'Pacifico', cursive; /* Add the desired decorative font name */
+    font-size: 60px; /* Increase the font size as needed */
+    padding-top: 150px; /* Adjust the padding as needed */
+    transition: color 0.3s; /* Add a smooth transition effect */
+  }
+  
+  #hikkaduwa-section h1:hover {
+    color: #33e6e6; /* Change the color on hover to cyan or any other desired color */
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+
+  .map-box {
+    border: 2px solid blue;
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+
+  #details {
+    background-color: #CDFCF6;
+    padding: 20px;
+    color: white;
+    display: flex; /* Use flexbox to create a flexible container */
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  #details2 {
+    background-color: #F0EABE;
+    padding: 20px;
+    color: white;
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  #details p {
+    width: 600px;
+    position: relative;
+    left: 260px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
+  #details2 p {
+    text-align: center;
+    width: 600px;
+    position: relative;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+
+#details img.hikkaduwa-image {
+  border: 5px solid black;
+  float: left;
+  width: 600px; /* Adjust the width as desired */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+
+#details2 img.hikkaduwa-image2 {
+  border: 5px solid black;
+  float: right;
+  width: 600px; /* Adjust the width as desired */
+  height: 480px; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add some spacing between the image and text */
+  margin-top: 20px;
+}
+
+#image-gallery {
+  text-align: center;
+  background-color: #CDFCF6;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -15px;
+}
+
+.zoom-image {
+  width: 200px; /* Adjust the width as desired */
+  height: 200px; /* Maintain aspect ratio */
+  margin: 10px;
+  transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.zoom-image:hover {
+  transform: scale(1.5); /* Increase the image scale on hover */
+}
+
+.large-image {
+  width: 350px; /* Increase the width for larger images */
+}
+
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  }
+  
+  .social-media li {
+  margin-right: 10px;
+  }
+  
+  /* .social-media li:last-child {
+  margin-right: 0;
+  } */
+  
+  .social-media a {
+  color: #fff;
+  font-size: 24px;
+  }
+  
+  .social-media a:hover {
+  color: #f5a623;
+  }
+
+  footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+  }
+  
+  footer a {
+  color: #999;
+  text-decoration:none;
+  }
+  
+  footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+  }
+  
+  footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+  }
+  
+  .footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  }
+  
+  .footer-bottom p {
+  font-size: 14px;
+  margin-bottom: 0;
+  }
+  
+  @media (max-width: 767px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column-1 {
+    margin-right: 0;
+  }
+  
+  .social-media {
+    text-align: center;
+  }
+  
+  .social-media li {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px; /* adjust this value to reduce or increase the space between the icons */
+  }
+  
+  /* .social-media li:last-child {
+    margin-bottom: 0;
+  } */
+  }
+
+  .social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  }
+  
+  .social-icons a {
+  margin-right: 10px;
+  color: #000; /* Change color as desired */
+  font-size: 34px;
+  }
+  
+  .social-icons a:hover {
+  color: #3b5998; /* Change color as desired */
+  }
+
+  .col-md-2 h5 {
+  font-size: 26px;
+  
+  }
+
+  .social-icons {
+  margin-top: 0.3rem;
+}
+
+.col-md-2 h5 {
+  margin-top: 0.1rem;
+}
+
+.button5 {
+width: 202px;
+height: 55px;
+border-radius: 5px;
+background-color: #05BFDB;
+font-size: 18px;
+color: black;
+border: none;
+padding: 10px;
+cursor: pointer;
+margin-top:5px;
+margin-left: 5px;
+margin-bottom: 5px;
+}
+
+.footer {
+  height: 87vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
