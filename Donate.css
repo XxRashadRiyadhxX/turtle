@@ -68,7 +68,6 @@ body {
 	padding: 0;
 	display: flex;
   white-space: nowrap;
-  font-size: 20px;
     
 }
 
@@ -178,6 +177,75 @@ body {
   background-color: #000000;
   font-family: Arial, sans-serif;
 }
+
+.container5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.product-image {
+  flex-basis: 40%;
+  margin-right: 20px;
+}
+
+
+.purchase-box {
+  flex-basis: 55%;
+  margin-bottom: 55px;
+  margin-left: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#form2 {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="submit2"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit2"]:hover {
+  background-color: #45a049;
+}
+
 
 .overlay {
   position: fixed;
@@ -289,37 +357,21 @@ input[type="email"] {
     font-size: 16px;
     }
 
-.Image {
+.Product1 {
   background-color: #000000;
   align-items: left;
   height: 70vh;
+  margin-left: 20px;
 }
 
-.Image img {
-  width: 600px;
-  height: 400px;
+.Product1 img {
+  width: 500px;
+  height: 250px;
   border: 4px solid #4CAF50;
-
 }
 
-.Image h5 {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 56px;
-  margin-left: 900px;
-  margin-bottom: -45px;
-  margin-top: 50px;
-  text-decoration: underline;
-}
-
-.Image h6 {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 26px;
-  margin-top: -320px;
-  margin-left: 900px;
-  line-height: 2.5;
-  word-spacing: 0.2em;
+.Product2{
+  width: 400px;
 }
 
 .social-media {
@@ -347,6 +399,7 @@ input[type="email"] {
   }
 
   footer {
+  margin-top: 40px;
   padding-top: 30px;
   background-color: #292c2f;
   color: #bbb;
@@ -431,6 +484,7 @@ input[type="email"] {
 
   .col-md-2 h5 {
   font-size: 26px;
+  margin-bottom: -5px;
   
   }
 
@@ -458,7 +512,7 @@ margin-bottom: 5px;
 }
 
 .footer {
-  height: 87vh;
+  height: 90vh;
 }
 
 .container {
@@ -466,3 +520,14 @@ margin-bottom: 5px;
   margin: 0 auto;
   text-align: left;
 }
+
+.footer-bottom {
+  background-color: #292c2f;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0px;
+  font-weight: 300px;
+  }

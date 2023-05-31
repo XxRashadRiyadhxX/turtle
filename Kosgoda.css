@@ -70,7 +70,6 @@ body {
 	padding: 0;
 	display: flex;
     white-space: nowrap;
-    font-size: 20px;
     
 }
 
@@ -251,9 +250,8 @@ img {
 
 /* Align images in a row */
 .image-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+   display: grid;
+   grid-template-columns: auto auto auto;
   }
   
   /* Apply hover effect */
@@ -449,3 +447,13 @@ img {
     margin: 0 auto;
     text-align: left;
   }
+
+  .footer-bottom {
+    background-color: #292c2f;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    }
