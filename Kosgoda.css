@@ -303,7 +303,7 @@ img {
     border-color: #27ae60;
   }
 
-.social-media {
+  .social-media {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -314,9 +314,6 @@ img {
     margin-right: 10px;
     }
     
-    /* .social-media li:last-child {
-    margin-right: 0;
-    } */
     
     .social-media a {
     color: #fff;
@@ -389,9 +386,6 @@ img {
       margin-bottom: 10px; /* adjust this value to reduce or increase the space between the icons */
     }
     
-    /* .social-media li:last-child {
-      margin-bottom: 0;
-    } */
     }
   
     .social-icons {
@@ -435,19 +429,18 @@ img {
   cursor: pointer;
   margin-top:5px;
   margin-left: 5px;
-  margin-bottom: 5px;
   }
   
-  .footer {
-    height: 87vh;
+  .button30 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 270px;
   }
   
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: left;
-  }
-
   .footer-bottom {
     background-color: #292c2f;
     padding: 5px;
@@ -457,3 +450,10 @@ img {
     font-weight: 300;
     margin-top: 5px;
     }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+    }
+  

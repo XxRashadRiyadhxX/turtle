@@ -444,9 +444,6 @@ body {
     margin-right: 10px;
     }
     
-    /* .social-media li:last-child {
-    margin-right: 0;
-    } */
     
     .social-media a {
     color: #fff;
@@ -519,9 +516,6 @@ body {
       margin-bottom: 10px; /* adjust this value to reduce or increase the space between the icons */
     }
     
-    /* .social-media li:last-child {
-      margin-bottom: 0;
-    } */
     }
   
     .social-icons {
