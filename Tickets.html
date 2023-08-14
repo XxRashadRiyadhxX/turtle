@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <!--Favicon img next to the title-->
+    <link rel="stylesheet" href="Tickets.css" />
+    <!--To Link the CSS-->
+  </head>
+
+  <body>
+    <div class="container" x-data="initTickets()">
+      <div class="page-heading">
+        <h1>Buy Tickets</h1>
+        <a href="index.html" class="home-link">&lt; Home</a>
+        <div class="instructions">
+          <div class="instructions_text">
+            <p>Show your tickets via mobile</p>
+            <p>device or print at home.</p>
+          </div>
+          <img
+            src="images/360_F_536241340_GsrsNhcWC0hyTVaJLilNafyDw6fl0cC8.jpg"
+            alt="Mobile picture"
+          />
+        </div>
+      </div>
+
+      <!-- Dates Section -->
+
+      <div class="date-section">
+        <h2>Dates</h2>
+        <label class="date-label" for="selectedDate">Check-in date:</label>
+        <input type="date" id="selectedDate" required />
+      </div>
+      <!--Duration Section-->
+
+      <div class="duration-section">
+        <h3>Duration</h3>
+        <div class="duration-controls">
+          <label for="duration-slot">Duration:</label>
+          <select name="duration" id="duration-slot" required multiple>
+            <option selected>07.00am to 08.00am</option>
+            <option>08.00am to 09.00am</option>
+            <option>09.00am to 10.00am</option>
+            <option>10.00am to 11.00am(Peak)</option>
+            <option>11.00am to 12.00pm(Peak)</option>
+            <option>12.00pm to 01.00pm(Peak)</option>
+            <option>01.00pm to 02.00pm</option>
+            <option>02.00pm to 03.00pm</option>
+            <option>03.00pm to 04.00pm(Peak)</option>
+            <option>04.00pm to 05.00pm(Peak)</option>
+            <option>05.00pm to 06.00pm(Peak)</option>
+          </select>
+          <button type="button" id="ClearDuration">Clear Slot</button>
+        </div>
+      </div>
+      <!--Price Section-->
+
+      <div class="pricing-section">
+        <h3>Pricing</h3>
+        <table class="pricing-table">
+          <tr>
+            <th>Guest Category</th>
+            <th>Charge per Normal Hour (USD)</th>
+            <th>Charge per Peak Hour (USD)</th>
+          </tr>
+          <tr>
+            <td>Foreigner Adult</td>
+            <td>$10</td>
+            <td>$13</td>
+          </tr>
+          <tr>
+            <td>Foreigner Child</td>
+            <td>$5</td>
+            <td>$8</td>
+          </tr>
+          <tr>
+            <td>SL Adult</td>
+            <td>$4</td>
+            <td>$6</td>
+          </tr>
+          <tr>
+            <td>SL Child</td>
+            <td>$2</td>
+            <td>$3</td>
+          </tr>
+          <tr>
+            <td>Infants</td>
+            <td>Free</td>
+            <td>Free</td>
+          </tr>
+        </table>
+      </div>
+      <!--Guests Section-->
+
+      <div class="guests-section">
+        <h2>Guests</h2>
+
+        <!-- SL Adults -->
+        <div class="guest-control">
+          <h3 class="guest-category">SL Adults</h3>
+          <button id="SLAdultDecrement">-</button>
+          <input
+            type="number"
+            value="0"
+            min="0"
+            class="guest-input"
+            id="SLAdult"
+          />
+          <button id="SLAdultIncrement">+</button>
+        </div>
+
+        <!-- SL Child -->
+        <div class="guest-control">
+          <h3 class="guest-category">SL Child</h3>
+          <button id="SLChildDecrement">-</button>
+          <input
+            type="number"
+            value="0"
+            min="0"
+            class="guest-input"
+            id="SLChild"
+          />
+          <button id="SLChildIncrement">+</button>
+        </div>
+
+        <!-- Foreigner Adult -->
+        <div class="guest-control">
+          <h3 class="guest-category">Foreigner Adult</h3>
+          <button id="ForeignerAdultDecrement">-</button>
+          <input
+            type="number"
+            value="1"
+            min="0"
+            class="guest-input"
+            id="ForeignerAdult"
+          />
+          <button id="ForeignerAdultIncrement">+</button>
+        </div>
+
+        <!-- Foreigner Child -->
+        <div class="guest-control">
+          <h3 class="guest-category">Foreigner Child</h3>
+          <button id="ForeignerChildDecrement">-</button>
+          <input
+            type="number"
+            value="0"
+            min="0"
+            class="guest-input"
+            id="ForeignerChild"
+            value="0"
+          />
+          <button id="ForeignerChildIncrement">+</button>
+        </div>
+
+        <!-- Infants -->
+        <div class="guest-control">
+          <h3 class="guest-category">Infants</h3>
+          <button id="InfantsDecrement">-</button>
+          <input
+            type="number"
+            value="0"
+            min="0"
+            class="guest-input"
+            id="Infants"
+          />
+          <button id="InfantsIncrement">+</button>
+        </div>
+      </div>
+
+      <!--Summary Section-->
+
+      <div id="summary-section">
+        <h3>Summary</h3>
+        <table id="summary-table">
+          <tr>
+            <th>Date</th>
+            <td><div id="currdate"></div></td>
+          </tr>
+          <tr>
+            <th>Time</th>
+            <td>
+              <div id="MainTime">07:00am to 08:00am</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Duration</th>
+            <td>
+              <div id="MainTime2">1hr (01 Normal : 00 Peak)</div>
+            </td>
+          </tr>
+          <tr class="Guss">
+            <th>Tickets</th>
+            <th>Charges</th>
+          </tr>
+          <tr>
+            <th><span id="totalSLAdults"></span> SL Adults</th>
+            <td><div id="SLAdult1"></div></td>
+          </tr>
+          <tr>
+            <th><span id="totalSLChildren"></span> SL Children</th>
+            <td><div id="SLChild1"></div></td>
+          </tr>
+          <tr>
+            <th><span id="totalForeignerAdults"></span> Foreigner Adults</th>
+            <td><div id="ForeignerAdult1"></div></td>
+          </tr>
+          <tr>
+            <th>
+              <span id="totalForeignerChildren"></span> Foreigner Children
+            </th>
+            <td><div id="ForeignerChild1"></div></td>
+          </tr>
+          <tr>
+            <th><span id="totalInfants"></span> Infants</th>
+            <td><div id="Infant1">Free</div></td>
+          </tr>
+          <tr class="tp">
+            <th>Total Payable</th>
+            <td><div id="Total1"></div></td>
+          </tr>
+        </table>
+      </div>
+
+      <a href="Details.html">
+        <button type="button" id="purchaseButton" disabled>
+          Continue with purchase
+        </button></a
+      >
+    </div>
+
+    <script src="ticket.js"></script>
+    <!-- <script src="Tickets.js"></script> -->
+  </body>
+</html>

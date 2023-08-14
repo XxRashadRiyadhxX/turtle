@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Details.css" />
+  </head>
+  <body>
+    <div x-data="initTickets()">
+      <div class="container">
+        <div class="page-heading">
+          <h1>Details Page</h1>
+          <a href="index.html" class="home-link">&lt; Home</a>
+          <a href="Tickets.html" class="tickets-link">&lt; Tickets</a>
+          <div class="instructions">
+            <div class="instructions_text">
+              <p>Show your tickets via mobile</p>
+              <p>device or print at home.</p>
+            </div>
+            <img
+              src="images/360_F_536241340_GsrsNhcWC0hyTVaJLilNafyDw6fl0cC8.jpg"
+              alt="Mobile picture"
+            />
+          </div>
+        </div>
+        <div class="summary-section">
+          <h3>Summary</h3>
+          <table id="summary-table1">
+            <tr>
+              <th>Date</th>
+              <td><div id="currdate"></div></td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td>
+                <div id="MainTime"></div>
+              </td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td>
+                <div id="MainTime2"></div>
+              </td>
+            </tr>
+            <tr class="Guss">
+              <th>Tickets</th>
+              <th>Charges</th>
+            </tr>
+            <tr>
+              <th><span id="totalSLAdults"></span> SL Adults</th>
+              <td><div id="SLAdult1"></div></td>
+            </tr>
+            <tr>
+              <th><span id="totalSLChildren"></span> SL Children</th>
+              <td><div id="SLChild1"></div></td>
+            </tr>
+            <tr>
+              <th><span id="totalForeignerAdults"></span> Foreigner Adults</th>
+              <td><div id="ForeignerAdult1"></div></td>
+            </tr>
+            <tr>
+              <th>
+                <span id="totalForeignerChildren"></span> Foreigner Children
+              </th>
+              <td><div id="ForeignerChild1"></div></td>
+            </tr>
+            <tr>
+              <th><span id="totalInfants"></span> Infants</th>
+              <td><div id="Infant1">Free</div></td>
+            </tr>
+            <tr class="tp">
+              <th>Total Payable</th>
+              <td><div id="Total1"></div></td>
+            </tr>
+          </table>
+        </div>
+
+        <form id="SubmitForm">
+          <fieldset>
+            <div class="Name">
+              <label for="FullName">Full Name</label>
+              <p>Same as your ID</p>
+              <input
+                type="text"
+                name="name"
+                id="FullName"
+                placeholder="Full Name"
+                required
+              />
+              <div id="NameError" class="error-message"></div>
+            </div>
+            <div class="Number">
+              <label for="Phone Number">Phone Number</label>
+              <div class="select-menu">
+                <div class="select-btn">
+                  <span class="sBtn-text">Select your option</span>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-au"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Australia (+61)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-cn"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">China (+86)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-fr"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">France (+33)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-de"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Germany (+49)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-in"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">India (+91)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-it"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Italy (+39)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-jp"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Japan (+81)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-my"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Malaysia (+60)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-mx"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Mexico (+52)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-np"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Nepal (+977)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-nz"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">New Zealand (+64)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-ru"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Russia (+7)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-sg"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Singapore (+65)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-lk"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Sri Lanka (+94)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-es"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Spain (+34)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-se"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Sweden (+46)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-gb"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">UK (+44)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-ae"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">UAE (+971)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-us"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">US (+1)</span>
+                  </li>
+                  <li class="option">
+                    <i
+                      class="flag-icon flag-icon-vn"
+                      style="color: #171515"
+                    ></i>
+                    <span class="option-text">Vietnam (+84)</span>
+                  </li>
+                </ul>
+              </div>
+              <input
+                type="tel"
+                name="MobileNumber"
+                id="MobileNumber"
+                placeholder="Phone Number"
+                size="15"
+                maxlength="15"
+                required
+              />
+              <div id="PhoneError" class="error-message"></div>
+            </div>
+
+            <div id="email">
+              <label for="Email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="Email"
+                placeholder="Email"
+                required
+              />
+              <div id="EmailError" class="error-message"></div>
+            </div>
+            <div id="confirmEmail">
+              <label for="ConfirmEmail">Confirm Email</label>
+              <input
+                type="email"
+                name="cemail"
+                id="ConfirmEmail"
+                placeholder="Confirm Email"
+                required
+              />
+              <div id="ConfirmEmailError" class="error-message"></div>
+            </div>
+
+            <div id="gender">
+              <label for="Gender">Gender</label>
+              <select id="Gender">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <a href="Payment.html">
+              <button type="button" id="purchaseButton" disabled>
+                Continue with purchase
+              </button></a
+            >
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="detail.js"></script>
+  </body>
+</html>

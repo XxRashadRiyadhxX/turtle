@@ -241,6 +241,54 @@ body {
   margin-top: -15px;
 }
 
+.Book-Now {
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #F0EABE;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#prebook-btn a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.box {
+  border: 3px solid #007BFF;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 600px;
+  
+}
+
+.box p {
+    line-height: 1.6;
+}
+
+#prebook-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#prebook-btn:hover {
+  background-color: #0056b3;
+}
+
 .zoom-image {
   width: 200px; /* Adjust the width as desired */
   height: 200px; /* Maintain aspect ratio */

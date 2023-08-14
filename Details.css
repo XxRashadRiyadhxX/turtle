@@ -1,0 +1,285 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling for the container */
+  body {
+    font-family: Arial, sans-serif;
+    background: rgb(37,121,173);
+    background: linear-gradient(196deg, rgba(37,121,173,1) 0%, rgba(21,134,43,1) 100%);
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-heading {
+    background: linear-gradient(135deg, #2579ad, #15862b); /* Adjust the color values */
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+    position: relative;
+  }
+  
+  .page-heading h1 {
+    font-size: 48px; /* Adjust the font size as needed */
+  }
+  
+  .home-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .tickets-link {
+    position: absolute;
+    bottom: 10px;
+    left: 65px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    color: #ccc;
+  }
+
+  .tickets-link:hover {
+    color: #ccc;
+  }
+
+  .instructions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right; /* Align text to the right */
+    padding: 10px;
+    display: flex; /* Use flexbox to align items vertically */
+    align-items: center; /* Center items vertically */
+    align-items: flex-start; /* Align items at the top */
+  }
+  
+  .instructions_text {
+    color: #ccc;
+    margin-bottom: 10px;
+    margin-right: 10px; /* Add margin to the right of the text */
+    font-size: 10px; /* Adjust this value to reduce the text size */
+  }
+
+  .instructions .p {
+    color: #ccc;
+  }
+  
+  .instructions img {
+    width:40px;
+    height: 60px;;
+    height: auto;
+    margin-top: -4px;
+  }
+  
+  
+  @keyframes gradientAnimation {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+  }
+
+  /* Style for the Summary Section */
+.summary-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+/* Basic table styles */
+#summary-table1 {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#summary-table1 th, #summary-table1 td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Header row styles */
+#summary-table1 th {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+#summary-table1 tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Styling for the "Total Payable" row */
+#summary-table1 .total-payable th, #summary-table1 .total-payable td {
+  font-weight: bold;
+}
+
+/* Styling for the "Tickets" row */
+#summary-table1 .Guss th {
+  font-weight: bold;
+}
+
+/* Styling for cells with values */
+#summary-table1 div[id^="date"],
+#summary-table1 div[id^="time"],
+#summary-table1 div[id^="duration"],
+#summary-table1 div[id^="SLAdult"],
+#summary-table1 div[id^="SLChild"],
+#summary-table1 div[id^="ForeignAdult"],
+#summary-table1 div[id^="ForeignChild"],
+#summary-table1 div[id^="Infant"],
+#summary-table1 div[id^="total"] {
+  font-weight: bold;
+  color: #2c9ce1;
+}
+
+  
+fieldset {
+  border: 2px solid #0d5720; /* Dark green border */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f0fff0; /* Light green background */
+}
+
+legend {
+  font-size: 24px;
+  color: #0d5720; /* Dark green legend text */
+}
+
+div.Name, div.Number, div#Email, div#ConfirmEmail, div#gender {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #0d5720; /* Dark green label text */
+}
+
+p {
+  font-size: 14px;
+  color: #ffffff; /* Dark cyan paragraph text */
+}
+
+input[type="text"], input[type="tel"], input[type="email"], select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #2579ad; /* Dark cyan input borders */
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#purchaseButton {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2579ad;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underlined style */
+  transition: background-color 0.3s ease;
+}
+
+#purchaseButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#purchaseButton:hover {
+  background-color: #0d5720;
+  opacity: 0.8;
+}
+/* Error message styles */
+.error-message {
+  font-size: 0.8em; /* Adjust the font size as needed */
+  color: #ff0000; /* Red color for error messages */
+  margin-top: 4px; /* A small gap above the error message */
+}
+
+.select-menu{
+  margin: 5px auto;
+}
+.select-menu .select-btn{
+    display: flex;
+    height: 30px;
+    background: #fff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+.select-menu.active .options{
+    display: block;
+}
+.options .option{
+    display: flex;
+    height: 30;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+.options .option:hover{
+    background: #F2F2F2;
+}
+.option i{
+    font-size: 12px;
+    margin-right: 12px;
+}
+.option .option-text{
+    font-size: 14px;
+    color: #333;
+}

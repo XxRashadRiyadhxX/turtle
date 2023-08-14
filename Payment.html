@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="Payment.css" />
+  </head>
+  <body>
+    <div x-data="initTickets()">
+      <div class="container">
+        <div class="page-heading">
+          <h1>Payment Page</h1>
+          <a href="index.html" class="home-link">&lt; Home</a>
+          <a href="Tickets.html" class="tickets-link">&lt; Tickets</a>
+          <a href="Details.html" class="details-link">&lt; Details</a>
+
+          <div class="instructions">
+            <div class="instructions_text">
+              <p>Show your tickets via mobile</p>
+              <p>device or print at home.</p>
+            </div>
+            <img
+              src="images/360_F_536241340_GsrsNhcWC0hyTVaJLilNafyDw6fl0cC8.jpg"
+              alt="Mobile picture"
+            />
+          </div>
+        </div>
+        <form id="SubmitForm3">
+          <fieldset>
+            <h2>Payment Details</h2>
+            <div id="CreditCardNumber">
+              <label for="CardNumber">Card Number</label><br />
+              <input
+                type="number"
+                id="CardNumber"
+                name="CardNumber"
+                placeholder="xxxx-xxxx-xxxx-xxxx"
+                maxlength="16"
+                required
+              /><br />
+              <div id="CreditCardNumber_Error" class="error-message"></div>
+            </div>
+            <div id="CreditCardName">
+              <label for="CardName">Name on Card</label><br />
+              <input
+                type="text"
+                id="CardName"
+                name="CardName"
+                placeholder="Card Holders Name"
+                required
+              /><br />
+              <div id="CreditCardName_Error" class="error-message"></div>
+            </div>
+            <div id="ExpirationDate">
+              <label for="Exp_Date">Expiration Date</label><br />
+              <input
+                type="month"
+                id="Exp_Date"
+                name="Exp_Date"
+                required
+              /><br />
+              <div id="ExpirationDate_Error" class="error-message"></div>
+            </div>
+            <div id="cVV">
+              <label for="CVV">CVV</label><br />
+              <input
+                type="number"
+                id="CVV"
+                name="CVV"
+                placeholder="xxx"
+                maxlength="3"
+                pattern="[0-9]{3}"
+                required
+              /><br />
+              <div id="CVV_Error" class="error-message"></div>
+            </div>
+            <a href="Confirmation.html">
+              <button type="button" id="paymentButton" disabled>
+                Make Payment
+              </button></a
+            >
+          </fieldset>
+        </form>
+        <table border="1" id="summary-table2">
+          <tr>
+            <th>Name</th>
+            <td><div id="name"></div></td>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <td><div id="currdate"></div></td>
+          </tr>
+          <tr>
+            <th>Time</th>
+            <td><div id="MainTime"></div></td>
+          </tr>
+          <tr>
+            <th>Duration</th>
+            <td><div id="MainTime2"></div></td>
+          </tr>
+          <tr>
+            <th>Mobile</th>
+            <td><div id="mobile"></div></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><div id="email"></div></td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td><div id="gender"></div></td>
+          </tr>
+          <tr class="Guss">
+            <th>Tickets</th>
+            <th>Charges</th>
+          </tr>
+          <tr>
+            <th>SL Adult</th>
+            <td><div id="totalSLAdults"></div></td>
+          </tr>
+          <tr>
+            <th>SL Child</th>
+            <td><div id="totalSLChildren"></div></td>
+          </tr>
+          <tr>
+            <th>Foreigner Adults</th>
+            <td><div id="totalForeignerAdults"></div></td>
+          </tr>
+          <tr>
+            <th>Foreigner Child</th>
+            <td><div id="totalForeignerChildren"></div></td>
+          </tr>
+          <tr>
+            <th>Infants</th>
+            <td><div id="totalInfants"></div></td>
+          </tr>
+          <tr class="tp">
+            <th>Total Payable</th>
+            <td><div id="Total1"></div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="payments.js"></script>
+  </body>
+</html>

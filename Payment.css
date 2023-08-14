@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the container */
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(37,121,173);
+  background: linear-gradient(196deg, rgba(37,121,173,1) 0%, rgba(21,134,43,1) 100%);
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-heading {
+  background: linear-gradient(135deg, #2579ad, #15862b); /* Adjust the color values */
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 50px 50px 50px 50px;
+  position: relative;
+}
+
+.page-heading h1 {
+  font-size: 48px; /* Adjust the font size as needed */
+}
+
+.home-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.tickets-link {
+  position: absolute;
+  bottom: 10px;
+  left: 65px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.details-link {
+  position: absolute;
+  bottom: 10px;
+  left: 125px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.home-link:hover {
+  color: #ccc;
+}
+
+.tickets-link:hover {
+  color: #ccc;
+}
+
+.details-link:hover {
+  color: #ccc;
+}
+
+.instructions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right; /* Align text to the right */
+  padding: 10px;
+  display: flex; /* Use flexbox to align items vertically */
+  align-items: center; /* Center items vertically */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.instructions_text {
+  color: #ccc;
+  margin-bottom: 10px;
+  margin-right: 10px; /* Add margin to the right of the text */
+  font-size: 10px; /* Adjust this value to reduce the text size */
+}
+
+.instructions .p {
+  color: #ccc;
+}
+
+.instructions img {
+  width:40px;
+  height: 60px;;
+  height: auto;
+  margin-top: -4px;
+}
+
+
+@keyframes gradientAnimation {
+  0%, 100% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+}
+
+/* Payment form */
+#SubmitForm3 {
+  margin-top: 20px;
+}
+
+fieldset {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Payment button */
+#paymentButton {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2579ad;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underlined style */
+  transition: background-color 0.3s ease;
+}
+
+#paymentButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#paymentButton:hover {
+  background-color: #0d5720;
+  opacity: 0.8;
+}
+
+/* Summary table */
+#summary-table2 {
+  width: 80%;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+#summary-table2 th,
+#summary-table2 td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#summary-table2 th {
+  background-color: #2579ad;
+  color: white;
+  font-weight: bold;
+}
+
+#summary-table2 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Center-align text in the first column */
+#summary-table2 td:first-child {
+  text-align: left;
+}

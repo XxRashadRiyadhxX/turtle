@@ -1,0 +1,439 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the container */
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(37,121,173);
+  background: linear-gradient(196deg, rgba(37,121,173,1) 0%, rgba(21,134,43,1) 100%);
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-heading {
+  background: linear-gradient(135deg, #2579ad, #15862b); /* Adjust the color values */
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 50px 50px 50px 50px;
+  position: relative;
+}
+
+.page-heading h1 {
+  font-size: 48px; /* Adjust the font size as needed */
+}
+
+.home-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.home-link:hover {
+  color: #ccc;
+}
+
+.instructions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right; /* Align text to the right */
+  padding: 10px;
+  display: flex; /* Use flexbox to align items vertically */
+  align-items: center; /* Center items vertically */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.instructions_text {
+  color: #ccc;
+  margin-bottom: 10px;
+  margin-right: 10px; /* Add margin to the right of the text */
+  font-size: 10px; /* Adjust this value to reduce the text size */
+}
+
+.instructions img {
+  width:40px;
+  height: 60px;;
+  height: auto;
+  margin-top: -4px;
+}
+
+
+@keyframes gradientAnimation {
+  0%, 100% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+}
+
+/* Style for the Dates section */
+.date-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+/* Style for Date label and input */
+.date-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#check-in {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the Guests section */
+.guests-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+/* Style for Guest Category headings */
+.guest-category {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  flex: 1; /* Take up available space to push controls to the middle */
+  margin-right: 10px; /* Add space between category and controls */
+
+}
+
+/* Style for the buttons and input fields */
+.guest-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 550px;
+  justify-content: center; /* Align controls to the middle */
+  gap: 10px; /* Add gap between button and input */
+}
+
+.guest-control button {
+  display: flex;
+  background-color: #15862b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: auto;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.guest-control button:hover {
+  background-color: #0d5720;
+}
+
+.guest-input {
+  flex: 1;
+  width: 50px; /* Adjust the width as needed */
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+/* Style for the Duration Section */
+.duration-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.duration-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.duration-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.duration-controls label {
+  font-size: 16px;
+}
+
+.duration-controls select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.duration-controls select:hover {
+  border-color: #15862b;
+}
+
+/* Styling for the pricing table */
+/* Styling for the pricing table */
+.pricing-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.pricing-table th {
+  background: linear-gradient(to bottom, #2579ad, #15862b);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pricing-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.pricing-table tr:last-child {
+  border-bottom: none;
+}
+
+/* Center-align text in the first column */
+.pricing-table td:first-child {
+  text-align: left;
+}
+
+/* Add hover effect to table rows */
+.pricing-table tr:hover {
+  background-color: rgba(37, 121, 173, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+/* Button styling */
+.action-button {
+  background-color: #2579ad;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #15862b;
+}
+
+
+
+/* Style for the Clear Slot button */
+#ClearDuration {
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ClearDuration:hover {
+  background-color: #c9302c;
+}
+
+/* Style for the Summary Section */
+#summary-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+#summary-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+}
+
+#summary-table th,
+#summary-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#summary-table th {
+  font-weight: bold;
+  background-color: #2579ad;
+  color: white;
+}
+
+#summary-table td strong {
+  font-weight: bold;
+}
+
+#summary-table tr:hover {
+  background-color: #c1bebe;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the Continue with purchase button */
+#purchaseButton {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2579ad;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underlined style */
+  transition: background-color 0.3s ease;
+}
+
+#purchaseButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#purchaseButton:hover {
+  background-color: #0d5720;
+  opacity: 0.8;
+}
+
+/* Headings */
+h2 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Form section */
+.form-section {
+  margin-bottom: 20px;
+}
+
+/* Inputs and buttons */
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 1.2rem;
+  }
+
+  h3 {
+      font-size: 1rem;
+  }
+}
+
+/* Media query for iPhone SE or similar small screens */
+@media (max-width: 320px) {
+  /* Adjust container width and padding for small screens */
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Adjust font sizes for small screens */
+  h1, h2, h3 {
+    font-size: 24px;
+  }
+
+  /* Adjust input width for small screens */
+  input[type="number"] {
+    width: 50px;
+  }
+
+  /* Adjust table styles for small screens */
+  .pricing-table, #summary-table {
+    font-size: 12px;
+  }
+
+  .guests-section {
+    flex-basis: auto;
+  }
+
+  .guest-control {
+    flex-basis: 100%;
+  }
+
+  /* Adjust font sizes for small screens */
+  h2, h3 {
+    font-size: 18px;
+  }
+
+  /* Adjust input width for small screens */
+  .guest-input {
+    width: 40px;
+  }
+
+  /* Center the buttons within guest controls */
+  .guest-control button {
+    display: block;
+    margin: 0 auto;
+  }
+}
